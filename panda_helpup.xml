@@ -64,6 +64,10 @@
     <body name="panda_link0" childclass="panda" >
         <geom class="panda_viz" mesh="link0_viz"/>
         <geom class="panda_col" mesh="link0_col" mass="2.91242"/>
+        <body name="base_box" pos="-0.105 0 -0.375">
+            <geom class="panda_viz" type="box" size="0.375 0.5 0.375" />
+            <geom class="panda_col" type="box" size="0.375 0.5 0.375" />
+        </body>
         <body name="panda_link1" pos="0 0 0.333">
             <joint name="panda_joint1" range="-2.8973 2.8973" class="panda_arm"/>
             <geom class="panda_viz" mesh="link1_viz"/>
@@ -93,6 +97,10 @@
                                     <geom class="panda_viz" mesh="link7_viz"/>
                                     <geom class="panda_col" mesh="link7_col" mass="0.2"/>
                                     <site name="panda_link7" size="0.01" pos="0.0 0.0 -0.04435" euler="3.14 0 0"/>
+                                        <body name="torso_box" pos="0 0 0.315">
+                                            <geom class="panda_viz" type="box" size="0.0685 0.1925 0.21"/>
+                                            <geom class="panda_col" type="box" size="0.0685 0.1925 0.21" mass="0.3"/>
+                                        </body>
                                   </body>
                             </body>
                         </body>

@@ -9,7 +9,7 @@
 
     <compiler angle="radian"/>
     <!-- <option timestep="0.002" noslip_iterations="20"/> -->
-    <option timestep="0.002"/>
+    <option timestep="0.001"/>
     <size nuser_actuator="5"/>
 
     <asset>
@@ -92,6 +92,7 @@
                                     <joint name="panda_joint7" range="-2.9671 2.9671" class="panda_forearm"/>
                                     <geom class="panda_viz" mesh="link7_viz"/>
                                     <geom class="panda_col" mesh="link7_col" mass="0.2"/>
+                                    <site name="panda_link7" size="0.01" pos="0.0 0.0 -0.04435" euler="3.14 0 0"/>
                                   </body>
                             </body>
                         </body>
@@ -112,4 +113,8 @@
         <position name="panda_joint7" joint="panda_joint7" class="panda" kp="120" forcerange="-12 12" ctrlrange="-2.9671 2.9671"/> <!-- velocity="2.9671" -->
     </actuator>
 
+    <sensor>
+        <force name="LeftHandForceSensor_fsensor" site="panda_link7" />
+        <torque name="LeftHandForceSensor_tsensor" site="panda_link7" />
+    </sensor>
 </mujoco>
